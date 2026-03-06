@@ -1,0 +1,14 @@
+${ include('_partials/htmlhead.html') }
+${ include('_partials/header.html') }
+
+<main>
+
+  ${ include('_partials/title.html') }
+
+  ${ data.content }
+
+</main>
+
+<nav id="menudir" popover>${ tacs.fn.nav.menuMain( data.link ) }</nav>
+
+${ include('_partials/htmlfoot.html') }

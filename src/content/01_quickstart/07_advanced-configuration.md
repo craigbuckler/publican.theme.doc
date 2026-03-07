@@ -16,7 +16,7 @@ The site build is configured by the `publican.config.js` file. It contains JavaS
 * [copy static files](https://publican.dev/docs/reference/publican-options/#pass-through-files) such as images and icons
 * run [event hook functions](https://publican.dev/docs/reference/event-functions/) to examine and modify data
 * append [custom global values and functions](https://publican.dev/docs/reference/global-properties/#custom-global-properties) to the `tacs` object
-* define [replacement strings](https://publican.dev/docs/reference/publican-options/#string-replacement) such as [`−−ROOT−−`](--ROOT--blog/updating-content/#adding-links)
+* define [replacement strings](https://publican.dev/docs/reference/publican-options/#string-replacement) such as [`−−ROOT−−`](--ROOT--quickstart/update-content/#adding-links)
 * [minify HTML](https://publican.dev/docs/reference/publican-options/#html-minification) in production mode
 * [clean the build directory](https://publican.dev/docs/reference/publican-methods/#clean)
 * [start the build](https://publican.dev/docs/reference/publican-methods/#build)

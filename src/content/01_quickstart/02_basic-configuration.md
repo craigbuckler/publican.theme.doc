@@ -75,6 +75,6 @@ Note that `SITE_THEMEHUE` is a single value between 0 and 360 on the color wheel
 NODE_ENV=production
 ```
 
-It should not ne necessary to change this file unless you want different development and production settings. For example, you may want to use the a `BUILD_ROOT` of `/` in development, but `/my-blog/` in production.
+It should not ne necessary to change this file unless you want different development and production settings. For example, you may want to use the a `BUILD_ROOT` of `/` in development, but `/my-docs/` in production.
 
 Both `.env` files are passed to the main `publican.config.js` script when you run `npm run build`. You must rerun it after making changes.

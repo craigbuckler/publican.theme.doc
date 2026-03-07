@@ -9,7 +9,7 @@ priority: 1.0
 
 The following sub-directories define site content:
 
-* `src/content/` provides markdown and other content for sitemaps, RSS feeds, etc.
+* `src/content/` provides markdown and other content
 * `src/content/css/` provides CSS stylesheets
 * `src/content/js/` provides client-side JavaScript functionality
 * `src/media/` provides images and icons (copied as [pass-through files](https://publican.dev/docs/setup/pass-through-files/))
@@ -29,7 +29,7 @@ The theme provides content files you can add, remove, or edit:
 
 The menu navigation follows the directory name order, so `01_section-one` comes before `02_section-two`. If you rename `02_section-two` to `00_section-two`, it would appear before `01_section-one`.
 
-The `NN_` value is removed from the path when creating a slug, so pages are rendered to `blog` and `about` directories in `build`.
+The `NN_` value is removed from the path when creating a slug, so pages are rendered to `quickstart` and `section-one` directories in `build`.
 
 Note:
 

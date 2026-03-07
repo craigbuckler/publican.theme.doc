@@ -2,9 +2,9 @@
 title: Example page one
 menu: Page one
 description: An example page.
-date: 2026-03-06
+date: 2026-03-05
 author: Craig Buckler
-tags: Publican, theme
+tags: example, content
 priority: 0.5
 ---
 

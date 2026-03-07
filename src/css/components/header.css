@@ -11,7 +11,7 @@ body > header {
     display: flex;
     align-content: center;
     justify-content: flex-start;
-    gap: min(1em, 1vw);
+    gap: min(1em, 3vw);
     padding-inline: var(--layout-margin);
     margin-inline: auto;
   }

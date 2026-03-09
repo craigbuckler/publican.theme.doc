@@ -13,7 +13,7 @@ img-src 'self' data:;
 media-src 'self';
 font-src 'none';
 style-src 'self';
-script-src 'self' 'sha256-ZOX448l7rXKv9iyuV8zV2PRNOWPsjZ7tkddjiBxmzqw=' 'sha256-OM0hjhCFzKhe37rKuW7480xLoDyRIzyLMKCvzoH6tGU=';
+script-src 'self' 'sha256-${ tacs.script.get('theme').hash }' 'sha256-${ data.script.get('schema').hash }' 'sha256-${ tacs.script.get('speculation').hash }';
 connect-src 'self';
 form-action 'none';
 frame-src 'none';
@@ -24,7 +24,7 @@ manifest-src 'self';
 <link rel="stylesheet" href="${ tacs.root }css/main.css">
 <script type="module" src="${ tacs.root }js/main.js"></script>
 <script type="module" src="${ tacs.root }search/staticsearch-component.js"></script>
-<script>document.documentElement.dataset.theme=localStorage.getItem('theme')||''</script>
+${ tacs.script.get('theme').code }
 
 <!-- meta -->
 <meta name="description" content="${ data.description || tacs.config.description }">
@@ -55,24 +55,7 @@ manifest-src 'self';
 <link rel="manifest" href="${ tacs.root }site.webmanifest">
 
 <!-- structured data -->
-<script type="application/ld+json">{
-"@context": "http://schema.org/",
-"@type": "TechArticle",
-"proficiencyLevel": "beginner",
-"headline": "${ data.title }",
-"description": "${ data.description }",
-"datePublished": "${ tacs.fn.format.dateISO( data.date ) }T00:00:00+00:00",
-"dateModified": "${ tacs.fn.format.dateISO( data.modified || data.date ) }T00:00:00+00:00",
-"mainEntityOfPage": { "@type": "WebPage", "@id": "${ tacs.config.domain }${ data.link }"},
-"image": "${ tacs.config.domain }${ tacs.root }favicon512.png",
-"author": { "@type": "Person", "name": "${ data.author || tacs.config.author }", "url": "${ data.authorUrl || tacs.config.authorUrl }" },
-"inLanguage": "${ tacs.config.language }",
-"contentLocation": "online",
-"accessMode": ["textual"],
-"accessModeSufficient": "textual",
-"isFamilyFriendly": true,
-"wordCount": "${ data.wordCount }"
-}</script>
+${ data.script.get('schema').code }
 
 <!-- social media -->
 <meta property="og:site_name" content="${ tacs.config.title }">

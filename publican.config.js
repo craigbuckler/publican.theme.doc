@@ -49,6 +49,9 @@ publican.config.processContent.add( fnHooks.contentFilename );
 // processContent hook: replace ::: tags
 publican.config.processContent.add( fnHooks.htmlBlocks );
 
+// processRenderStart hook: generate site inline scripts and CSP hashes
+publican.config.processRenderStart.add( fnHooks.renderstartInlineScripts );
+
 // processRenderStart hook: change title, descriptions, etc.
 publican.config.processRenderStart.add( fnHooks.renderstartData );
 
@@ -57,6 +60,9 @@ publican.config.processRenderStart.add( fnHooks.renderstartTagScore );
 
 // processPreRender hook: determine related posts
 publican.config.processPreRender.add( fnHooks.prerenderRelated );
+
+// processPreRender hook: generate page inline scripts and CSP hashes
+publican.config.processPreRender.add( fnHooks.prerenderInlineScripts );
 
 // processPostRender hook: add <meta> tags
 publican.config.processPostRender.add( fnHooks.postrenderMeta );

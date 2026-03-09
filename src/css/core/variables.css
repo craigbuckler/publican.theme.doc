@@ -31,24 +31,24 @@
   /* colors */
   --color-hue: var(--theme-hue, 270);      /* main hue - just change this value */
 
-  --color-chroma: 3%;
+  --color-chroma: 4%;
 
-  --color-lum: 20%;     /* luminosity main */
-  --color-lumf: 5%;     /* luminosity factor */
+  --color-lum: 21%;     /* luminosity main */
+  --color-lumf: 7%;     /* luminosity factor */
 
   --color-lumh: 20%;    /* luminosity hint */
-  --color-chromah: 70%; /* chroma hint */
+  --color-chromah: 80%; /* chroma hint */
 
   /* calculated colors */
-  --color-lumf0: calc(var(--color-lum) - (0 * var(--color-lumf)));
-  --color-lumf1: calc(var(--color-lum) - (1 * var(--color-lumf)));
-  --color-lumf2: calc(var(--color-lum) - (2 * var(--color-lumf)));
-  --color-lumf3: calc(var(--color-lum) - (3 * var(--color-lumf)));
+  --color-lumf0: calc(var(--color-lum) + (0 * var(--color-lumf)));
+  --color-lumf1: calc(var(--color-lum) + (1 * var(--color-lumf)));
+  --color-lumf2: calc(var(--color-lum) + (2 * var(--color-lumf)));
+  --color-lumf3: calc(var(--color-lum) + (3 * var(--color-lumf)));
 
-  --color-l1: oklch(calc(100% - var(--color-lumf0)) var(--color-chroma) var(--color-hue));
-  --color-l2: oklch(calc(100% - var(--color-lumf1)) var(--color-chroma) var(--color-hue));
-  --color-l3: oklch(calc(100% - var(--color-lumf2)) var(--color-chroma) var(--color-hue));
-  --color-l4: oklch(calc(100% - var(--color-lumf3)) var(--color-chroma) var(--color-hue));
+  --color-l1: oklch(calc(100% + var(--color-lum) - var(--color-lumf0)) var(--color-chroma) var(--color-hue));
+  --color-l2: oklch(calc(100% + var(--color-lum) - var(--color-lumf1)) var(--color-chroma) var(--color-hue));
+  --color-l3: oklch(calc(100% + var(--color-lum) - var(--color-lumf2)) var(--color-chroma) var(--color-hue));
+  --color-l4: oklch(calc(100% + var(--color-lum) - var(--color-lumf3)) var(--color-chroma) var(--color-hue));
 
   --color-d1: oklch(var(--color-lumf0) var(--color-chroma) var(--color-hue));
   --color-d2: oklch(var(--color-lumf1) var(--color-chroma) var(--color-hue));

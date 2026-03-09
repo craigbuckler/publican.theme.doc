@@ -43,12 +43,13 @@
     border-color: var(--color-hint1);
 
     strong {
-      color: var(--color-fore4);
+      color: var(--color-fore1);
     }
   }
 
   span {
     font-size: var(--fsize--2);
+    color: var(--color-fore4);
   }
 
   .back {

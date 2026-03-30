@@ -11,7 +11,7 @@ body > header {
     display: flex;
     align-content: center;
     justify-content: flex-start;
-    gap: min(1em, 3vw);
+    gap: min(1em, 3vi);
     padding-inline: var(--layout-margin);
     margin-inline: auto;
   }
@@ -69,7 +69,7 @@ static-search {
   &::part(startsearch) {
     block-size: 100%;
     padding-block: 2px;
-    padding-inline: 0.2em clamp(0.2em, 5vw, 6em);
+    padding-inline: 0.2em clamp(0.2em, 5vi, 6em);
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke: currentColor;

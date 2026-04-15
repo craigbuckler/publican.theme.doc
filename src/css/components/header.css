@@ -54,35 +54,37 @@ body > header {
 .search {
   block-size: 50%;
   align-content: center;
+  padding: 2px 0.2em;
   margin-inline-start: auto;
   margin-block-start: calc(0.25 * var(--header-height));
   background-color: var(--color-back1);
   border: 1px solid var(--color-fore1);
   border-radius: 4px;
+  cursor: pointer;
+
+  &:hover, &:active, &:focus, &:focus-within {
+    border-color: var(--color-hint1);
+  }
+
+  kbd {
+    display: inline-block;
+    font-size: var(--fsize--2);
+    color: var(--staticsearch-color-visited);
+    background-color: transparent;
+    border: 0 none;
+  }
 }
 
 static-search {
 
-  align-content: center;
-  margin-inline-start: auto;
-
-  &::part(startsearch) {
-    block-size: 100%;
-    padding-block: 2px;
-    padding-inline: 0.2em clamp(0.2em, 5vi, 6em);
+  &::part(activate) {
+    display: inline;
+    vertical-align: top;
+    inline-size: 1.5em;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke: currentColor;
     fill: none;
-  }
-
-  &::part(startsearch):hover, &::part(startsearch):focus, &::part(startsearch):active {
-    color: var(--color-hint1);
-  }
-
-  &::part(startsearchicon) {
-    inline-size: 1.5em;
-    block-size: auto;
   }
 
   &::part(dialog) {
